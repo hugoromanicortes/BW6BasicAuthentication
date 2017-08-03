@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" 
+	targetNamespace="http://www.atos.net/bw6basicauthentication/util" 
+	xmlns:tns="http://www.atos.net/bw6basicauthentication/util" 
+	elementFormDefault="qualified">
+	
+
+	<complexType name="base64encode">
+		<sequence>
+			<element name="input" type="string" /> 
+			<element name="output" type="string" minOccurs="0"/>
+		</sequence>
+	</complexType>
+	
+	<complexType name="base64decode">
+		<sequence>
+			<element name="input" type="string" /> 
+			<element name="output" type="string" minOccurs="0" />
+		</sequence>
+	</complexType>
+	
+	<element name="encode" type="tns:base64encode"/>
+	<element name="decode" type="tns:base64decode"/>
+	
+</schema>

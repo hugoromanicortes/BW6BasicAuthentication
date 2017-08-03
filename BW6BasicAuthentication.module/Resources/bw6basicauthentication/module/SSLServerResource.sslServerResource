@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jndi:namedResource xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:jndi="http://xsd.tns.tibco.com/amf/models/sharedresource/jndi" xmlns:keystore="http://xsd.tns.tibco.com/bw/sharedresource/trinity/models/cred/keystore" xmlns:sslserver="http://xsd.tns.tibco.com/bw/sharedresource/trinity/models/sslserver" xmi:id="_YTFPYXg5EeemZb-bBBQaxg" name="bw6basicauthentication.module.SSLServerResource" type="sslserver:SSLServerConfiguration">
+  <jndi:reference xmi:id="_Ofs0UHg6EeemZb-bBBQaxg" key="identityStoreServiceProvider" type="keystore:KeystoreConfiguration" value="bw6basicauthentication.module.KeystoreProviderResource"/>
+  <jndi:configuration xsi:type="sslserver:SSLServerConfiguration" xmi:id="_YTFPYng5EeemZb-bBBQaxg">
+    <substitutionBindings xmi:id="_8pgZYHg6EeemZb-bBBQaxg" template="keyPassword" propName="/security/keypassword"/>
+    <substitutionBindings xmi:id="_9Q-pEHg6EeemZb-bBBQaxg" template="keyAlias" propName="/security/keyaliasname"/>
+  </jndi:configuration>
+</jndi:namedResource>

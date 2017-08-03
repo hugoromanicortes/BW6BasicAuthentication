@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sca:composite xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:BW="http://xsd.tns.tibco.com/amf/models/sca/implementationtype/BW" xmlns:XMLSchema="http://www.w3.org/2001/XMLSchema" xmlns:compositeext="http://schemas.tibco.com/amx/3.0/compositeext" xmlns:property="http://ns.tibco.com/bw/property" xmlns:rest="http://xsd.tns.tibco.com/bw/models/binding/rest" xmlns:sca="http://www.osoa.org/xmlns/sca/1.0" xmlns:scact="http://xsd.tns.tibco.com/amf/models/sca/componentType" xmlns:scaext="http://xsd.tns.tibco.com/amf/models/sca/extensions" xmi:id="_546L8Hg4EeemZb-bBBQaxg" targetNamespace="http://tns.tibco.com/bw/composite/BW6BasicAuthentication.module" name="BW6BasicAuthentication.module" compositeext:version="1.0.0" compositeext:formatVersion="2">
+  <sca:service xmi:id="_9faYkHg4EeemZb-bBBQaxg" name="resource" promote="ComponentResource/resource">
+    <sca:interface.wsdl xmi:id="_9fgfMHg4EeemZb-bBBQaxg" interface="http://xmlns.example.com/20170803124609PLT#wsdl.interface(resource)" scaext:wsdlLocation="../Processes/bw6basicauthentication/module/Resource.bwp"/>
+    <scaext:binding xsi:type="rest:RestServiceBinding" xmi:id="_9fml0Hg4EeemZb-bBBQaxg" name="RestService" path="/resource" docBasePath="http://localhost:7777/BW6BasicAuthentication.module" docResourcePath="Resource" basePath="/" connector="bw6basicauthentication.module.Resource" structuredData="true" technologyVersion="2.0" implementation="Service Descriptors/bw6basicauthentication.module.Resource-Resource.json" policySets="bw6basicauthentication.module.BasicAuthentication" scaext:policySetLocations="BWRestHttpServiceBinding">
+      <operation xmi:id="_9fpCEHg4EeemZb-bBBQaxg" operationName="get" nickname="get-resource" httpMethod="GET" responseStyle="element">
+        <clientFormat>json</clientFormat>
+        <clientRequestFormat>json</clientRequestFormat>
+      </operation>
+      <parameters xmi:id="_9f6u4Hg4EeemZb-bBBQaxg"/>
+    </scaext:binding>
+    <scact:bindingAdjunct xmi:id="_9fpCEXg4EeemZb-bBBQaxg" bindingName="RestService"/>
+  </sca:service>
+  <sca:property xmi:id="_6D57AHg4EeemZb-bBBQaxg" name="BW.DEPLOYMENTUNIT.TYPE" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_6EBPwHg4EeemZb-bBBQaxg" name="BW.APPNODE.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_6EE6IHg4EeemZb-bBBQaxg" name="BW.DEPLOYMENTUNIT.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_6EIkgHg4EeemZb-bBBQaxg" name="BW.HOST.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_6EMO4Hg4EeemZb-bBBQaxg" name="BW.DOMAIN.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_6EP5QHg4EeemZb-bBBQaxg" name="BW.DEPLOYMENTUNIT.VERSION" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_6ETjoHg4EeemZb-bBBQaxg" name="BW.APPSPACE.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_6EWm8Hg4EeemZb-bBBQaxg" name="BW.MODULE.VERSION" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_6EZDMHg4EeemZb-bBBQaxg" name="BW.MODULE.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_1MTA8Hg6EeemZb-bBBQaxg" name="/security/keypassword" type="property:password" scaext:simpleValue="#!2CXllCZtLMQhx6VoIOP1Rg==" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_18V90Hg6EeemZb-bBBQaxg" name="/security/keyaliasname" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_BFMhkHg7EeemZb-bBBQaxg" name="/http/port" type="XMLSchema:int" scaext:simpleValue="0" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_FXyYIHg7EeemZb-bBBQaxg" name="/http/host" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:component xmi:id="_9fTD0Hg4EeemZb-bBBQaxg" name="ComponentResource" compositeext:version="1.0.0.qualifier">
+    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_9fTD0Xg4EeemZb-bBBQaxg" processName="bw6basicauthentication.module.Resource"/>
+    <sca:service xmi:id="_9fWHIHg4EeemZb-bBBQaxg" name="resource">
+      <sca:interface.wsdl xmi:id="_9fXVQHg4EeemZb-bBBQaxg" interface="http://xmlns.example.com/20170803124609PLT#wsdl.interface(resource)" scaext:wsdlLocation="../Processes/bw6basicauthentication/module/Resource.bwp"/>
+    </sca:service>
+  </sca:component>
+  <sca:component xmi:id="_fTl2AHg_EeemZb-bBBQaxg" name="Componentbase64decode" compositeext:version="1.0.0.qualifier">
+    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_fTl2AXg_EeemZb-bBBQaxg" processName="bw6basicauthentication.util.base64decode"/>
+  </sca:component>
+  <sca:component xmi:id="_vaoLAHg_EeemZb-bBBQaxg" name="Componentutil" compositeext:version="1.0.0.qualifier">
+    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_vaoLAXg_EeemZb-bBBQaxg" processName="bw6basicauthentication.util.util"/>
+  </sca:component>
+</sca:composite>

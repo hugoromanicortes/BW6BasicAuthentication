@@ -1,0 +1,7 @@
+{
+    "records": [],
+    "resources": [{
+        "location": "Service Descriptors/bw6basicauthentication.module.Resource-Resource.json",
+        "type": "generated"
+    }]
+}
